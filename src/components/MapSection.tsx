@@ -88,9 +88,9 @@ const MapSection = () => {
           </div>
         `);
         
-      // Add marker to map
+      // Add marker to map with fixed coordinate type
       new mapboxgl.Marker(markerEl)
-        .setLngLat(farmer.coordinates)
+        .setLngLat([farmer.coordinates[0], farmer.coordinates[1]])
         .setPopup(popup)
         .addTo(map.current!);
     });
